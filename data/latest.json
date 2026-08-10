@@ -1,205 +1,496 @@
 {
-  "updated_at": "2026-08-10 17:10 +08:00",
-  "overall_signal": "中性偏空",
-  "metals": {
-    "铜": {
-      "signal": "中性偏空",
-      "score": 46,
-      "note": "中国制造业PMI回落、地产和投资偏弱，压制传统需求；后续关注电网与全球制造业修复。"
+  "updated": "2026-08-11",
+  "is_demo": true,
+  "items": {
+    "copper_price": {
+      "value": 9800.0,
+      "change_pct": -0.75,
+      "unit": "USD/t",
+      "updated": "2026-08-11",
+      "is_demo": true
     },
-    "铝": {
-      "signal": "中性",
-      "score": 51,
-      "note": "国内投资偏弱，但供给约束与电力成本仍提供支撑。"
+    "aluminum_price": {
+      "value": 2550.0,
+      "change_pct": 0.38,
+      "unit": "USD/t",
+      "updated": "2026-08-11",
+      "is_demo": true
     },
-    "黄金": {
-      "signal": "中性偏多",
-      "score": 64,
-      "note": "实际利率仍高但央行购金保持强劲，美元走弱时弹性更好。"
-    }
-  },
-  "metrics": [
-    {
-      "id": "global_pmi",
-      "name": "全球制造业PMI",
-      "value": null,
-      "unit": "",
-      "period": "待接入",
-      "previous": null,
-      "direction": "—",
-      "signal": "中性",
-      "impact": "全球工业金属需求的总开关之一。",
-      "source": "S&P Global / J.P. Morgan（通常需授权或人工录入）",
-      "frequency": "月度",
-      "status": "manual"
+    "gold_price": {
+      "value": 3300.0,
+      "change_pct": 1.12,
+      "unit": "USD/oz",
+      "updated": "2026-08-11",
+      "is_demo": true
     },
-    {
-      "id": "china_pmi",
-      "name": "中国制造业PMI",
-      "value": 49.2,
-      "unit": "",
-      "period": "2026-07",
-      "previous": 50.3,
-      "direction": "↓",
-      "signal": "偏空",
-      "impact": "低于50表示制造业环比收缩，对铜铝需求偏弱。",
-      "source": "国家统计局",
-      "frequency": "月度",
-      "status": "official"
+    "silver_price": {
+      "value": 38.0,
+      "change_pct": -0.47,
+      "unit": "USD/oz",
+      "updated": "2026-08-11",
+      "is_demo": true
     },
-    {
-      "id": "us_gdp",
-      "name": "美国实际GDP增速",
+    "zinc_price": {
+      "value": 2850.0,
+      "change_pct": 0.46,
+      "unit": "USD/t",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "nickel_price": {
+      "value": 15500.0,
+      "change_pct": 1.88,
+      "unit": "USD/t",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "lme_copper_inventory": {
+      "value": 145000.0,
+      "change_pct": -1.16,
+      "unit": "t",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "shfe_copper_inventory": {
+      "value": 92000.0,
+      "change_pct": 1.13,
+      "unit": "t",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "lme_aluminum_inventory": {
+      "value": 420000.0,
+      "change_pct": -0.32,
+      "unit": "t",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "copper_tc": {
+      "value": 15.0,
+      "change_pct": -0.86,
+      "unit": "USD/dmt",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "copper_rc": {
       "value": 1.5,
-      "unit": "%",
-      "period": "2026Q2 年化环比",
-      "previous": 2.1,
-      "direction": "↓",
-      "signal": "偏空",
-      "impact": "美国增长放缓通常压制工业金属需求预期。",
-      "source": "BEA",
-      "frequency": "季度",
-      "status": "official"
+      "change_pct": -0.66,
+      "unit": "US¢/lb",
+      "updated": "2026-08-11",
+      "is_demo": true
     },
-    {
-      "id": "us_cpi",
-      "name": "美国CPI",
+    "china_pmi": {
+      "value": 50.2,
+      "change_pct": -1.06,
+      "unit": "index",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "global_pmi": {
+      "value": 50.0,
+      "change_pct": 0.4,
+      "unit": "index",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "dxy": {
+      "value": 98.5,
+      "change_pct": -1.43,
+      "unit": "index",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "us_real_yield_10y": {
+      "value": 1.7,
+      "change_pct": 1.19,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "m1_yoy": {
+      "value": 4.0,
+      "change_pct": -0.25,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "m2_yoy": {
+      "value": 8.2,
+      "change_pct": -0.85,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "tsf_yoy": {
+      "value": 8.7,
+      "change_pct": -1.25,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "new_rmb_loans": {
+      "value": 18000.0,
+      "change_pct": -0.66,
+      "unit": "亿元",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "lpr_1y": {
+      "value": 3.0,
+      "change_pct": -0.33,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "lpr_5y": {
       "value": 3.5,
+      "change_pct": 0.0,
       "unit": "%",
-      "period": "2026-06 同比",
-      "previous": null,
-      "direction": "—",
-      "signal": "中性偏空",
-      "impact": "通胀偏高会延缓降息，对黄金和有色估值形成约束。",
-      "source": "BLS",
-      "frequency": "月度",
-      "status": "official"
+      "updated": "2026-08-11",
+      "is_demo": true
     },
-    {
-      "id": "us_unemployment",
-      "name": "美国失业率",
-      "value": 4.1,
+    "china_10y_yield": {
+      "value": 1.85,
+      "change_pct": -0.54,
       "unit": "%",
-      "period": "2026-07",
-      "previous": null,
-      "direction": "—",
-      "signal": "中性",
-      "impact": "就业转弱有利于降息预期，但也可能意味着需求降温。",
-      "source": "BLS",
-      "frequency": "月度",
-      "status": "official"
+      "updated": "2026-08-11",
+      "is_demo": true
     },
-    {
-      "id": "fed_rate",
-      "name": "联邦基金目标区间",
-      "value": "3.50–3.75",
+    "bank_nim": {
+      "value": 1.45,
+      "change_pct": -1.36,
       "unit": "%",
-      "period": "2026-08",
-      "previous": "3.50–3.75",
-      "direction": "→",
-      "signal": "中性偏空",
-      "impact": "利率维持高位，对黄金和风险资产估值偏压制。",
-      "source": "Federal Reserve",
-      "frequency": "会议",
-      "status": "official"
+      "updated": "2026-08-11",
+      "is_demo": true
     },
-    {
-      "id": "china_fai",
-      "name": "中国固定资产投资",
-      "value": -5.7,
+    "bank_npl": {
+      "value": 1.5,
+      "change_pct": -1.32,
       "unit": "%",
-      "period": "2026-01~06 同比",
-      "previous": -4.1,
-      "direction": "↓",
-      "signal": "偏空",
-      "impact": "总投资走弱，对铜、铝、锌等传统需求不利。",
-      "source": "国家统计局",
-      "frequency": "月度累计",
-      "status": "official"
+      "updated": "2026-08-11",
+      "is_demo": true
     },
-    {
-      "id": "china_real_estate",
-      "name": "房地产开发投资",
-      "value": -18.0,
+    "provision_coverage": {
+      "value": 205.0,
+      "change_pct": -0.24,
       "unit": "%",
-      "period": "2026-01~06 同比",
-      "previous": null,
-      "direction": "—",
-      "signal": "偏空",
-      "impact": "地产仍是铜铝传统需求的重要拖累项。",
-      "source": "国家统计局",
-      "frequency": "月度累计",
-      "status": "official"
+      "updated": "2026-08-11",
+      "is_demo": true
     },
-    {
-      "id": "china_infra",
-      "name": "基础设施投资",
-      "value": -2.4,
+    "bank_roe": {
+      "value": 9.8,
+      "change_pct": 0.82,
       "unit": "%",
-      "period": "2026-01~06 同比",
-      "previous": null,
-      "direction": "—",
-      "signal": "偏空",
-      "impact": "基建偏弱削弱工业金属实物需求。",
-      "source": "国家统计局",
-      "frequency": "月度累计",
-      "status": "official"
+      "updated": "2026-08-11",
+      "is_demo": true
     },
-    {
-      "id": "china_mfg_invest",
-      "name": "制造业投资",
-      "value": -1.2,
+    "bank_pb": {
+      "value": 0.65,
+      "change_pct": -1.52,
+      "unit": "x",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "a_share_turnover": {
+      "value": 12000.0,
+      "change_pct": -0.24,
+      "unit": "亿元",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "margin_balance": {
+      "value": 19000.0,
+      "change_pct": 0.22,
+      "unit": "亿元",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "market_turnover_rate": {
+      "value": 2.3,
+      "change_pct": -1.71,
       "unit": "%",
-      "period": "2026-01~06 同比",
-      "previous": null,
-      "direction": "—",
-      "signal": "偏空",
-      "impact": "制造业资本开支放缓，对工业金属需求偏弱。",
-      "source": "国家统计局",
-      "frequency": "月度累计",
-      "status": "official"
+      "updated": "2026-08-11",
+      "is_demo": true
     },
-    {
-      "id": "dxy",
-      "name": "美元指数 DXY",
-      "value": null,
-      "unit": "",
-      "period": "待接入",
-      "previous": null,
-      "direction": "—",
-      "signal": "中性",
-      "impact": "美元走强通常压制美元计价金属；免费版默认可用Fed广义美元指数做代理。",
-      "source": "ICE DXY（授权数据）/ FRED广义美元指数（免费代理）",
-      "frequency": "日度",
-      "status": "manual"
+    "ipo_fundraising": {
+      "value": 180.0,
+      "change_pct": -0.37,
+      "unit": "亿元",
+      "updated": "2026-08-11",
+      "is_demo": true
     },
-    {
-      "id": "real_yield",
-      "name": "美国10年期实际利率",
-      "value": 2.4,
+    "fund_issuance": {
+      "value": 650.0,
+      "change_pct": -0.3,
+      "unit": "亿元",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "new_investors": {
+      "value": 120.0,
+      "change_pct": 0.75,
+      "unit": "万户",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "csi300": {
+      "value": 4300.0,
+      "change_pct": 0.91,
+      "unit": "index",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "csi1000": {
+      "value": 6900.0,
+      "change_pct": -0.38,
+      "unit": "index",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "broker_pb": {
+      "value": 1.6,
+      "change_pct": 0.63,
+      "unit": "x",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "risk_appetite": {
+      "value": 62.0,
+      "change_pct": -1.48,
+      "unit": "score",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "pharma_revenue_yoy": {
+      "value": 5.5,
+      "change_pct": 0.55,
       "unit": "%",
-      "period": "2026-08-04",
-      "previous": 2.44,
-      "direction": "↓",
-      "signal": "偏多",
-      "impact": "实际利率下降通常利好黄金，并改善风险资产估值。",
-      "source": "FRED / Federal Reserve DFII10",
-      "frequency": "日度",
-      "status": "official"
+      "updated": "2026-08-11",
+      "is_demo": true
     },
-    {
-      "id": "central_bank_gold",
-      "name": "央行购金",
-      "value": 243.7,
-      "unit": "吨",
-      "period": "2026Q1",
-      "previous": 237.0,
-      "direction": "↑",
-      "signal": "偏多",
-      "impact": "央行持续净购金，为黄金提供结构性需求支撑。",
-      "source": "World Gold Council",
-      "frequency": "季度",
-      "status": "official"
+    "pharma_profit_yoy": {
+      "value": 7.2,
+      "change_pct": -0.55,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "health_expenditure": {
+      "value": 24000.0,
+      "change_pct": -0.29,
+      "unit": "亿元",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "medical_insurance_income": {
+      "value": 2800.0,
+      "change_pct": 0.2,
+      "unit": "亿元",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "medical_insurance_expense": {
+      "value": 2500.0,
+      "change_pct": -0.7,
+      "unit": "亿元",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "china_ind_count": {
+      "value": 180.0,
+      "change_pct": 0.04,
+      "unit": "件",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "china_nda_count": {
+      "value": 45.0,
+      "change_pct": -0.22,
+      "unit": "件",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "fda_nme_count": {
+      "value": 52.0,
+      "change_pct": -0.48,
+      "unit": "件",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "cxo_index": {
+      "value": 58.0,
+      "change_pct": 0.19,
+      "unit": "score",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "pharma_pe": {
+      "value": 28.0,
+      "change_pct": -0.25,
+      "unit": "x",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "mfg_pmi": {
+      "value": 50.2,
+      "change_pct": 0.48,
+      "unit": "index",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "pmi_new_orders": {
+      "value": 50.8,
+      "change_pct": 0.59,
+      "unit": "index",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "pmi_new_export_orders": {
+      "value": 49.4,
+      "change_pct": 0.39,
+      "unit": "index",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "industrial_value_added_yoy": {
+      "value": 6.0,
+      "change_pct": 0.17,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "ppi_yoy": {
+      "value": -0.6,
+      "change_pct": 4.76,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "mfg_fai_yoy": {
+      "value": 8.5,
+      "change_pct": -1.39,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "industrial_profit_yoy": {
+      "value": 4.2,
+      "change_pct": -0.24,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "capacity_utilization": {
+      "value": 75.2,
+      "change_pct": -1.43,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "exports_yoy": {
+      "value": 6.5,
+      "change_pct": -1.22,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "industrial_inventory_yoy": {
+      "value": 3.8,
+      "change_pct": -0.26,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "robot_output_yoy": {
+      "value": 12.5,
+      "change_pct": 0.48,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "machine_tool_output_yoy": {
+      "value": 7.0,
+      "change_pct": -1.13,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "global_semiconductor_sales": {
+      "value": 58.0,
+      "change_pct": 0.26,
+      "unit": "USD bn",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "semiconductor_sales_yoy": {
+      "value": 12.0,
+      "change_pct": 0.84,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "sox_index": {
+      "value": 5800.0,
+      "change_pct": -0.68,
+      "unit": "index",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "cloud_capex": {
+      "value": 105.0,
+      "change_pct": -0.77,
+      "unit": "USD bn",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "ai_server_index": {
+      "value": 78.0,
+      "change_pct": 0.71,
+      "unit": "score",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "tsmc_revenue_yoy": {
+      "value": 25.0,
+      "change_pct": 0.2,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "dram_price_index": {
+      "value": 115.0,
+      "change_pct": -0.09,
+      "unit": "index",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "nand_price_index": {
+      "value": 108.0,
+      "change_pct": -0.32,
+      "unit": "index",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "smartphone_shipments_yoy": {
+      "value": 4.5,
+      "change_pct": 0.9,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "china_software_revenue_yoy": {
+      "value": 11.5,
+      "change_pct": 0.88,
+      "unit": "%",
+      "updated": "2026-08-11",
+      "is_demo": true
+    },
+    "tech_pe": {
+      "value": 36.0,
+      "change_pct": -0.83,
+      "unit": "x",
+      "updated": "2026-08-11",
+      "is_demo": true
     }
-  ]
+  }
 }

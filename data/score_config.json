@@ -1,0 +1,68 @@
+{
+  "metals": {
+    "label": "有色景气度",
+    "weights": {
+      "copper_price": 1,
+      "lme_copper_inventory": -1,
+      "copper_tc": -1,
+      "china_pmi": 1,
+      "dxy": -1,
+      "us_real_yield_10y": -1
+    }
+  },
+  "bank": {
+    "label": "银行景气度",
+    "weights": {
+      "tsf_yoy": 1,
+      "m2_yoy": 1,
+      "bank_nim": 1,
+      "bank_npl": -1,
+      "bank_roe": 1,
+      "bank_pb": -0.3
+    }
+  },
+  "broker": {
+    "label": "券商景气度",
+    "weights": {
+      "a_share_turnover": 1,
+      "margin_balance": 1,
+      "market_turnover_rate": 1,
+      "fund_issuance": 1,
+      "risk_appetite": 1,
+      "broker_pb": -0.2
+    }
+  },
+  "pharma": {
+    "label": "医药景气度",
+    "weights": {
+      "pharma_revenue_yoy": 1,
+      "pharma_profit_yoy": 1,
+      "china_ind_count": 1,
+      "china_nda_count": 1,
+      "cxo_index": 1,
+      "pharma_pe": -0.2
+    }
+  },
+  "manufacturing": {
+    "label": "制造业景气度",
+    "weights": {
+      "mfg_pmi": 1,
+      "pmi_new_orders": 1,
+      "industrial_value_added_yoy": 1,
+      "mfg_fai_yoy": 1,
+      "industrial_profit_yoy": 1,
+      "industrial_inventory_yoy": -0.3
+    }
+  },
+  "technology": {
+    "label": "科技景气度",
+    "weights": {
+      "semiconductor_sales_yoy": 1,
+      "cloud_capex": 1,
+      "ai_server_index": 1,
+      "tsmc_revenue_yoy": 1,
+      "dram_price_index": 1,
+      "tech_pe": -0.2
+    }
+  }
+}

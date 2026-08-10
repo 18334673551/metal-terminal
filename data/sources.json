@@ -1,0 +1,50 @@
+{
+  "version": "3.1",
+  "notes": [
+    "Only map a dashboard indicator to a real series when the definition/unit is semantically compatible.",
+    "DXY is NOT substituted with the Fed broad dollar index.",
+    "LME/SHFE inventory and copper TC/RC remain pending because a stable free official API was not assumed."
+  ],
+  "providers": {
+    "fred": {
+      "requires_secret": "FRED_API_KEY",
+      "series": {
+        "copper_price": {
+          "series_id": "PCOPPUSDM",
+          "name": "全球铜价（月均）",
+          "unit": "USD/t",
+          "frequency": "月频",
+          "source_label": "FRED / IMF Primary Commodity Prices"
+        },
+        "aluminum_price": {
+          "series_id": "PALUMUSDM",
+          "name": "全球铝价（月均）",
+          "unit": "USD/t",
+          "frequency": "月频",
+          "source_label": "FRED / IMF Primary Commodity Prices"
+        },
+        "zinc_price": {
+          "series_id": "PZINCUSDM",
+          "name": "全球锌价（月均）",
+          "unit": "USD/t",
+          "frequency": "月频",
+          "source_label": "FRED / IMF Primary Commodity Prices"
+        },
+        "nickel_price": {
+          "series_id": "PNICKUSDM",
+          "name": "全球镍价（月均）",
+          "unit": "USD/t",
+          "frequency": "月频",
+          "source_label": "FRED / IMF Primary Commodity Prices"
+        },
+        "us_real_yield_10y": {
+          "series_id": "DFII10",
+          "name": "美国10Y实际利率",
+          "unit": "%",
+          "frequency": "日频",
+          "source_label": "FRED / Federal Reserve Board H.15"
+        }
+      }
+    }
+  }
+}

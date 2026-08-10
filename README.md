@@ -1,62 +1,34 @@
-# 有色金属投资终端 V2 — 手机优先 PWA
+# 投资研究终端 V3
 
-## V2 新增
-- 手机优先界面
-- 底部 App 导航：首页 / 宏观 / 铜 / 铝 / 黄金
-- PWA Web App Manifest
-- Service Worker 离线缓存
-- “安装到手机桌面”入口（支持 beforeinstallprompt 的浏览器）
-- iOS Web App 元信息与 Apple Touch Icon
-- 网络优先更新 `data/latest.json`，失败自动使用离线/内嵌数据
-- 铜 / 铝 / 黄金独立驱动页
-- GitHub Actions 保留日更数据能力
+完整 PWA 工程，兼容你现有 GitHub Pages `/metal-terminal/` 路径和 Android TWA 外壳。
 
-## 本地运行
-PWA 的 Service Worker 不能可靠地从 `file://` 直接运行。
+## 功能
+- 六大板块：有色、银行、券商、医药、制造业、科技
+- 70 个关键指标
+- 指标详情页 + 1M/3M/1Y/3Y/5Y/ALL 历史折线图
+- 行业景气度评分
+- 搜索、市场总览、深色移动端 UI
+- PWA Manifest + Service Worker
+- JSON 数据层
+- GitHub Actions 数据格式校验
 
-Windows：
-双击 `start_windows.bat`
+## 重要
+当前 `data/history/*.json` 为 DEMO 演示序列，仅用于验证 UI 和图表，不是真实市场数据。
 
-或：
-```bash
-python -m http.server 8000
+真实数据接入时，保持每个历史文件为：
+```json
+{"id":"copper_price","name":"铜价","unit":"USD/t","frequency":"日频","source":"真实数据源","is_demo":false,"updated":"2026-08-11","data":[["2026-08-10",9750],["2026-08-11",9820]]}
 ```
-打开：
-http://localhost:8000
+然后运行：
+```bash
+python scripts/update_data.py
+```
 
-## 免费部署
-### GitHub Pages
-1. 新建一个 GitHub 仓库。
-2. 把本项目全部文件上传到仓库根目录。
-3. Settings → Pages。
-4. Source 选择 `Deploy from a branch`。
-5. Branch 选择 `main` + `/root`。
-6. 保存并等待生成 HTTPS 地址。
+## 部署
+把 ZIP 解压后的内容上传/覆盖到现有 `metal-terminal` 仓库根目录。
+GitHub Pages 继续使用 `main / (root)`。
 
-PWA/Service Worker 在 HTTPS 或 localhost 环境下工作最佳。
+只更新网页、图表、指标和 JSON 时，无需重新打 APK；现有 TWA APK 会继续打开：
+`https://18334673551.github.io/metal-terminal/`
 
-## 手机安装
-### Android / Chrome
-打开部署后的 HTTPS 地址。如果浏览器判断可安装，首页会出现“安装到手机桌面”按钮，也可用浏览器菜单安装应用。
-
-### iPhone / Safari
-打开部署后的地址 → 分享 → 添加到主屏幕。iOS 的安装入口由 Safari 提供，不一定触发网页内的安装按钮。
-
-## 目录
-- index.html：V2 App UI
-- manifest.webmanifest：PWA 清单
-- sw.js：离线缓存
-- icons/：App 图标
-- data/latest.json：数据
-- scripts/update_data.py：自动更新脚本
-- .github/workflows/update.yml：每日 GitHub Actions
-
-## 下一阶段 V3
-建议新增：
-- 铜 / 铝 / 金现货与期货价格
-- LME / SHFE 库存
-- 铜精矿 TC/RC
-- 供需平衡表
-- 历史分位
-- 金属景气评分引擎
-- 紫金矿业 / 洛阳钼业 / 江西铜业 / 中国铝业等公司页
+若要修改 Android 桌面上的应用名称，才需要重新构建 APK。

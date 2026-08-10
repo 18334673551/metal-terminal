@@ -1,0 +1,478 @@
+{
+  "app": {
+    "name": "投资研究终端 V3",
+    "version": "3.1.0"
+  },
+  "disclaimer": "V3.1 采用混合数据模式：已接入的指标由官方/权威数据源自动更新；尚未接入的指标保留 DEMO 或手工导入状态。任何指标均应以详情页的数据来源和 LIVE/DEMO 标识为准。",
+  "sectors": [
+    {
+      "id": "metals",
+      "name": "有色金属",
+      "icon": "⛏️",
+      "description": "金属价格、库存、加工费与宏观驱动",
+      "indicators": [
+        {
+          "id": "copper_price",
+          "name": "全球铜价（月均）",
+          "unit": "USD/t",
+          "frequency": "月频"
+        },
+        {
+          "id": "aluminum_price",
+          "name": "全球铝价（月均）",
+          "unit": "USD/t",
+          "frequency": "月频"
+        },
+        {
+          "id": "gold_price",
+          "name": "黄金",
+          "unit": "USD/oz",
+          "frequency": "日频"
+        },
+        {
+          "id": "silver_price",
+          "name": "白银",
+          "unit": "USD/oz",
+          "frequency": "日频"
+        },
+        {
+          "id": "zinc_price",
+          "name": "全球锌价（月均）",
+          "unit": "USD/t",
+          "frequency": "月频"
+        },
+        {
+          "id": "nickel_price",
+          "name": "全球镍价（月均）",
+          "unit": "USD/t",
+          "frequency": "月频"
+        },
+        {
+          "id": "lme_copper_inventory",
+          "name": "LME铜库存",
+          "unit": "t",
+          "frequency": "日频"
+        },
+        {
+          "id": "shfe_copper_inventory",
+          "name": "SHFE铜库存",
+          "unit": "t",
+          "frequency": "周频"
+        },
+        {
+          "id": "lme_aluminum_inventory",
+          "name": "LME铝库存",
+          "unit": "t",
+          "frequency": "日频"
+        },
+        {
+          "id": "copper_tc",
+          "name": "铜精矿TC",
+          "unit": "USD/dmt",
+          "frequency": "周频"
+        },
+        {
+          "id": "copper_rc",
+          "name": "铜精矿RC",
+          "unit": "US¢/lb",
+          "frequency": "周频"
+        },
+        {
+          "id": "china_pmi",
+          "name": "中国制造业PMI",
+          "unit": "index",
+          "frequency": "月频"
+        },
+        {
+          "id": "global_pmi",
+          "name": "全球制造业PMI",
+          "unit": "index",
+          "frequency": "月频"
+        },
+        {
+          "id": "dxy",
+          "name": "美元指数DXY",
+          "unit": "index",
+          "frequency": "日频"
+        },
+        {
+          "id": "us_real_yield_10y",
+          "name": "美国10Y实际利率",
+          "unit": "%",
+          "frequency": "日频"
+        }
+      ]
+    },
+    {
+      "id": "bank",
+      "name": "银行",
+      "icon": "🏦",
+      "description": "信用、利率、资产质量与盈利能力",
+      "indicators": [
+        {
+          "id": "m1_yoy",
+          "name": "M1同比",
+          "unit": "%",
+          "frequency": "月频"
+        },
+        {
+          "id": "m2_yoy",
+          "name": "M2同比",
+          "unit": "%",
+          "frequency": "月频"
+        },
+        {
+          "id": "tsf_yoy",
+          "name": "社融存量同比",
+          "unit": "%",
+          "frequency": "月频"
+        },
+        {
+          "id": "new_rmb_loans",
+          "name": "新增人民币贷款",
+          "unit": "亿元",
+          "frequency": "月频"
+        },
+        {
+          "id": "lpr_1y",
+          "name": "1年期LPR",
+          "unit": "%",
+          "frequency": "月频"
+        },
+        {
+          "id": "lpr_5y",
+          "name": "5年期以上LPR",
+          "unit": "%",
+          "frequency": "月频"
+        },
+        {
+          "id": "china_10y_yield",
+          "name": "中国10Y国债收益率",
+          "unit": "%",
+          "frequency": "日频"
+        },
+        {
+          "id": "bank_nim",
+          "name": "商业银行净息差NIM",
+          "unit": "%",
+          "frequency": "季频"
+        },
+        {
+          "id": "bank_npl",
+          "name": "商业银行不良率",
+          "unit": "%",
+          "frequency": "季频"
+        },
+        {
+          "id": "provision_coverage",
+          "name": "拨备覆盖率",
+          "unit": "%",
+          "frequency": "季频"
+        },
+        {
+          "id": "bank_roe",
+          "name": "银行业ROE",
+          "unit": "%",
+          "frequency": "季频"
+        },
+        {
+          "id": "bank_pb",
+          "name": "银行指数PB",
+          "unit": "x",
+          "frequency": "日频"
+        }
+      ]
+    },
+    {
+      "id": "broker",
+      "name": "券商",
+      "icon": "📈",
+      "description": "市场活跃度、两融、发行与估值",
+      "indicators": [
+        {
+          "id": "a_share_turnover",
+          "name": "A股两市成交额",
+          "unit": "亿元",
+          "frequency": "日频"
+        },
+        {
+          "id": "margin_balance",
+          "name": "融资融券余额",
+          "unit": "亿元",
+          "frequency": "日频"
+        },
+        {
+          "id": "market_turnover_rate",
+          "name": "A股换手率",
+          "unit": "%",
+          "frequency": "日频"
+        },
+        {
+          "id": "ipo_fundraising",
+          "name": "IPO融资额",
+          "unit": "亿元",
+          "frequency": "月频"
+        },
+        {
+          "id": "fund_issuance",
+          "name": "公募基金新发规模",
+          "unit": "亿元",
+          "frequency": "月频"
+        },
+        {
+          "id": "new_investors",
+          "name": "新增投资者",
+          "unit": "万户",
+          "frequency": "月频"
+        },
+        {
+          "id": "csi300",
+          "name": "沪深300",
+          "unit": "index",
+          "frequency": "日频"
+        },
+        {
+          "id": "csi1000",
+          "name": "中证1000",
+          "unit": "index",
+          "frequency": "日频"
+        },
+        {
+          "id": "broker_pb",
+          "name": "券商指数PB",
+          "unit": "x",
+          "frequency": "日频"
+        },
+        {
+          "id": "risk_appetite",
+          "name": "市场风险偏好",
+          "unit": "score",
+          "frequency": "日频"
+        }
+      ]
+    },
+    {
+      "id": "pharma",
+      "name": "医药",
+      "icon": "🧬",
+      "description": "行业增长、医保、创新药与估值",
+      "indicators": [
+        {
+          "id": "pharma_revenue_yoy",
+          "name": "医药制造业营收同比",
+          "unit": "%",
+          "frequency": "月频"
+        },
+        {
+          "id": "pharma_profit_yoy",
+          "name": "医药制造业利润同比",
+          "unit": "%",
+          "frequency": "月频"
+        },
+        {
+          "id": "health_expenditure",
+          "name": "医疗卫生支出",
+          "unit": "亿元",
+          "frequency": "年频"
+        },
+        {
+          "id": "medical_insurance_income",
+          "name": "医保基金收入",
+          "unit": "亿元",
+          "frequency": "月频"
+        },
+        {
+          "id": "medical_insurance_expense",
+          "name": "医保基金支出",
+          "unit": "亿元",
+          "frequency": "月频"
+        },
+        {
+          "id": "china_ind_count",
+          "name": "中国创新药IND受理",
+          "unit": "件",
+          "frequency": "月频"
+        },
+        {
+          "id": "china_nda_count",
+          "name": "中国创新药NDA受理",
+          "unit": "件",
+          "frequency": "月频"
+        },
+        {
+          "id": "fda_nme_count",
+          "name": "FDA年度NME批准",
+          "unit": "件",
+          "frequency": "年频"
+        },
+        {
+          "id": "cxo_index",
+          "name": "CXO景气指数",
+          "unit": "score",
+          "frequency": "月频"
+        },
+        {
+          "id": "pharma_pe",
+          "name": "医药指数PE",
+          "unit": "x",
+          "frequency": "日频"
+        }
+      ]
+    },
+    {
+      "id": "manufacturing",
+      "name": "制造业",
+      "icon": "🏭",
+      "description": "PMI、工业生产、投资、库存与出口",
+      "indicators": [
+        {
+          "id": "mfg_pmi",
+          "name": "制造业PMI",
+          "unit": "index",
+          "frequency": "月频"
+        },
+        {
+          "id": "pmi_new_orders",
+          "name": "PMI新订单",
+          "unit": "index",
+          "frequency": "月频"
+        },
+        {
+          "id": "pmi_new_export_orders",
+          "name": "PMI新出口订单",
+          "unit": "index",
+          "frequency": "月频"
+        },
+        {
+          "id": "industrial_value_added_yoy",
+          "name": "工业增加值同比",
+          "unit": "%",
+          "frequency": "月频"
+        },
+        {
+          "id": "ppi_yoy",
+          "name": "PPI同比",
+          "unit": "%",
+          "frequency": "月频"
+        },
+        {
+          "id": "mfg_fai_yoy",
+          "name": "制造业固定资产投资同比",
+          "unit": "%",
+          "frequency": "月频"
+        },
+        {
+          "id": "industrial_profit_yoy",
+          "name": "工业企业利润同比",
+          "unit": "%",
+          "frequency": "月频"
+        },
+        {
+          "id": "capacity_utilization",
+          "name": "工业产能利用率",
+          "unit": "%",
+          "frequency": "季频"
+        },
+        {
+          "id": "exports_yoy",
+          "name": "出口金额同比",
+          "unit": "%",
+          "frequency": "月频"
+        },
+        {
+          "id": "industrial_inventory_yoy",
+          "name": "工业企业产成品库存同比",
+          "unit": "%",
+          "frequency": "月频"
+        },
+        {
+          "id": "robot_output_yoy",
+          "name": "工业机器人产量同比",
+          "unit": "%",
+          "frequency": "月频"
+        },
+        {
+          "id": "machine_tool_output_yoy",
+          "name": "金属切削机床产量同比",
+          "unit": "%",
+          "frequency": "月频"
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "name": "科技",
+      "icon": "💻",
+      "description": "半导体、AI资本开支、存储与消费电子",
+      "indicators": [
+        {
+          "id": "global_semiconductor_sales",
+          "name": "全球半导体销售额",
+          "unit": "USD bn",
+          "frequency": "月频"
+        },
+        {
+          "id": "semiconductor_sales_yoy",
+          "name": "全球半导体销售同比",
+          "unit": "%",
+          "frequency": "月频"
+        },
+        {
+          "id": "sox_index",
+          "name": "费城半导体指数",
+          "unit": "index",
+          "frequency": "日频"
+        },
+        {
+          "id": "cloud_capex",
+          "name": "全球云厂商CAPEX",
+          "unit": "USD bn",
+          "frequency": "季频"
+        },
+        {
+          "id": "ai_server_index",
+          "name": "AI服务器景气指数",
+          "unit": "score",
+          "frequency": "月频"
+        },
+        {
+          "id": "tsmc_revenue_yoy",
+          "name": "台积电月营收同比",
+          "unit": "%",
+          "frequency": "月频"
+        },
+        {
+          "id": "dram_price_index",
+          "name": "DRAM价格指数",
+          "unit": "index",
+          "frequency": "周频"
+        },
+        {
+          "id": "nand_price_index",
+          "name": "NAND价格指数",
+          "unit": "index",
+          "frequency": "周频"
+        },
+        {
+          "id": "smartphone_shipments_yoy",
+          "name": "全球智能手机出货同比",
+          "unit": "%",
+          "frequency": "季频"
+        },
+        {
+          "id": "china_software_revenue_yoy",
+          "name": "中国软件业务收入同比",
+          "unit": "%",
+          "frequency": "月频"
+        },
+        {
+          "id": "tech_pe",
+          "name": "科技指数PE",
+          "unit": "x",
+          "frequency": "日频"
+        }
+      ]
+    }
+  ],
+  "data_mode": "hybrid"
+}
