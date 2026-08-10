@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#08111f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="有色终端">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<title>有色金属投资终端</title>
+<style>
+:root {
+  --bg:#08111f;--panel:#101d30;--panel2:#13263e;--line:#233a58;
+  --text:#eef5ff;--muted:#8fa6c2;--accent:#6aa9ff;
+  --good:#43d39e;--bad:#ff6f7d;--mid:#f3bd63;--nav:#091421ee;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{background:var(--bg)}
+body{margin:0;background:linear-gradient(180deg,#07111e 0,#0b1728 55%,#08111f 100%);color:var(--text);font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;min-height:100vh}
+button,input,select{font:inherit}
+.app{max-width:780px;margin:0 auto;padding:env(safe-area-inset-top) 14px calc(92px + env(safe-area-inset-bottom))}
+.header{padding:18px 4px 8px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.brand h1{font-size:23px;margin:0 0 5px;font-weight:760} .sub{font-size:12px;color:var(--muted)}
+.iconbtn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:12px;padding:9px 12px}
+.hero{margin-top:10px;padding:18px;border:1px solid var(--line);background:linear-gradient(145deg,#10243d,#0d192b);border-radius:20px}
+.heroTop{display:flex;justify-content:space-between;gap:14px;align-items:center} .eyebrow{font-size:12px;color:var(--muted)}
+.signal{font-size:30px;font-weight:800;margin:5px 0} .sync{font-size:12px;color:var(--muted);margin-top:10px}
+.metalGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.metal{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:13px;text-align:left;color:var(--text)}
+.metalName{font-size:13px;color:var(--muted)} .metalScore{font-size:25px;font-weight:800;margin:4px 0}
+.section{margin-top:18px} .section h2{font-size:18px;margin:0 0 10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.card{background:rgba(16,29,48,.95);border:1px solid var(--line);border-radius:16px;padding:14px}
+.metricName{font-size:13px;color:#cbd8e9} .metricValue{font-size:24px;font-weight:780;margin:7px 0}
+.meta{font-size:11px;color:var(--muted);line-height:1.45} .impact{font-size:12px;color:#c4d2e4;line-height:1.55;margin-top:8px}
+.pill{display:inline-flex;border-radius:999px;padding:3px 8px;font-size:11px;border:1px solid var(--line)}
+.good{color:var(--good)} .bad{color:var(--bad)} .mid{color:var(--mid)}
+.tools{display:flex;gap:8px;margin:12px 0} .tools input,.tools select{min-width:0;border:1px solid var(--line);background:#0c192a;color:var(--text);border-radius:12px;padding:11px 12px}
+.tools input{flex:1} .tools select{width:116px}
+.detailPanel{display:none} .detailPanel.active{display:block}
+.empty{padding:28px 16px;text-align:center;color:var(--muted)}
+.note{border-left:3px solid var(--accent);background:#0f2036;border-radius:12px;padding:12px 14px;color:#cfe0f5;font-size:13px;line-height:1.65}
+.install{display:none;margin-top:12px;width:100%;border:0;border-radius:14px;padding:12px;background:var(--accent);color:#07111e;font-weight:750}
+.install.show{display:block}
+.bottom{position:fixed;z-index:10;left:50%;transform:translateX(-50%);bottom:0;width:min(100%,780px);padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:var(--nav);border-top:1px solid var(--line);backdrop-filter:blur(16px);display:grid;grid-template-columns:repeat(5,1fr)}
+.navbtn{border:0;background:transparent;color:var(--muted);padding:8px 3px;border-radius:12px;font-size:11px} .navbtn b{display:block;font-size:18px;margin-bottom:2px} .navbtn.active{color:var(--accent);background:#12243a}
+.statusDot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--good);margin-right:6px}
+@media(max-width:460px){.grid{grid-template-columns:1fr}.metalGrid{gap:7px}.metal{padding:11px}.signal{font-size:28px}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="header">
+    <div class="brand"><h1>有色金属投资终端</h1><div class="sub">宏观 · 商品 · 供需 · 景气信号</div></div>
+    <button id="refreshBtn" class="iconbtn" type="button">刷新</button>
+  </header>
+
+  <main>
+    <section id="home" class="detailPanel active">
+      <div class="hero">
+        <div class="heroTop">
+          <div><div class="eyebrow">今日有色宏观信号</div><div id="overall" class="signal">—</div></div>
+          <span id="networkBadge" class="pill mid">加载中</span>
+        </div>
+        <div id="updated" class="sync">—</div>
+        <button id="installBtn" class="install" type="button">安装到手机桌面</button>
+      </div>
+      <div id="metalGrid" class="metalGrid"></div>
+      <div class="section"><h2>关键观察</h2><div id="keyMetrics" class="grid"></div></div>
+      <div class="section"><div class="note">评分只是研究辅助，不是买卖信号。V2 目前以宏观指标为主；后续接入金属价格、库存、TC/RC、供需平衡后，铜/铝/黄金评分才会更接近完整行业景气模型。</div></div>
+    </section>
+
+    <section id="macro" class="detailPanel">
+      <div class="section"><h2>宏观数据</h2>
+        <div class="tools"><input id="search" placeholder="搜索 PMI、房地产、利率…"><select id="filter"><option value="all">全部</option><option value="偏多">偏多</option><option value="中性">中性</option><option value="偏空">偏空</option></select></div>
+        <div id="metrics" class="grid"></div>
+      </div>
+    </section>
+
+    <section id="copper" class="detailPanel"></section>
+    <section id="aluminum" class="detailPanel"></section>
+    <section id="gold" class="detailPanel"></section>
+  </main>
+</div>
+
+<nav class="bottom" aria-label="主导航">
+  <button class="navbtn active" data-page="home"><b>⌂</b>首页</button>
+  <button class="navbtn" data-page="macro"><b>◎</b>宏观</button>
+  <button class="navbtn" data-page="copper"><b>Cu</b>铜</button>
+  <button class="navbtn" data-page="aluminum"><b>Al</b>铝</button>
+  <button class="navbtn" data-page="gold"><b>Au</b>黄金</button>
+</nav>
+
+<script>
+const FALLBACK_DATA = {"updated_at": "2026-08-10 17:10 +08:00", "overall_signal": "中性偏空", "metals": {"铜": {"signal": "中性偏空", "score": 46, "note": "中国制造业PMI回落、地产和投资偏弱，压制传统需求；后续关注电网与全球制造业修复。"}, "铝": {"signal": "中性", "score": 51, "note": "国内投资偏弱，但供给约束与电力成本仍提供支撑。"}, "黄金": {"signal": "中性偏多", "score": 64, "note": "实际利率仍高但央行购金保持强劲，美元走弱时弹性更好。"}}, "metrics": [{"id": "global_pmi", "name": "全球制造业PMI", "value": null, "unit": "", "period": "待接入", "previous": null, "direction": "—", "signal": "中性", "impact": "全球工业金属需求的总开关之一。", "source": "S&P Global / J.P. Morgan（通常需授权或人工录入）", "frequency": "月度", "status": "manual"}, {"id": "china_pmi", "name": "中国制造业PMI", "value": 49.2, "unit": "", "period": "2026-07", "previous": 50.3, "direction": "↓", "signal": "偏空", "impact": "低于50表示制造业环比收缩，对铜铝需求偏弱。", "source": "国家统计局", "frequency": "月度", "status": "official"}, {"id": "us_gdp", "name": "美国实际GDP增速", "value": 1.5, "unit": "%", "period": "2026Q2 年化环比", "previous": 2.1, "direction": "↓", "signal": "偏空", "impact": "美国增长放缓通常压制工业金属需求预期。", "source": "BEA", "frequency": "季度", "status": "official"}, {"id": "us_cpi", "name": "美国CPI", "value": 3.5, "unit": "%", "period": "2026-06 同比", "previous": null, "direction": "—", "signal": "中性偏空", "impact": "通胀偏高会延缓降息，对黄金和有色估值形成约束。", "source": "BLS", "frequency": "月度", "status": "official"}, {"id": "us_unemployment", "name": "美国失业率", "value": 4.1, "unit": "%", "period": "2026-07", "previous": null, "direction": "—", "signal": "中性", "impact": "就业转弱有利于降息预期，但也可能意味着需求降温。", "source": "BLS", "frequency": "月度", "status": "official"}, {"id": "fed_rate", "name": "联邦基金目标区间", "value": "3.50–3.75", "unit": "%", "period": "2026-08", "previous": "3.50–3.75", "direction": "→", "signal": "中性偏空", "impact": "利率维持高位，对黄金和风险资产估值偏压制。", "source": "Federal Reserve", "frequency": "会议", "status": "official"}, {"id": "china_fai", "name": "中国固定资产投资", "value": -5.7, "unit": "%", "period": "2026-01~06 同比", "previous": -4.1, "direction": "↓", "signal": "偏空", "impact": "总投资走弱，对铜、铝、锌等传统需求不利。", "source": "国家统计局", "frequency": "月度累计", "status": "official"}, {"id": "china_real_estate", "name": "房地产开发投资", "value": -18.0, "unit": "%", "period": "2026-01~06 同比", "previous": null, "direction": "—", "signal": "偏空", "impact": "地产仍是铜铝传统需求的重要拖累项。", "source": "国家统计局", "frequency": "月度累计", "status": "official"}, {"id": "china_infra", "name": "基础设施投资", "value": -2.4, "unit": "%", "period": "2026-01~06 同比", "previous": null, "direction": "—", "signal": "偏空", "impact": "基建偏弱削弱工业金属实物需求。", "source": "国家统计局", "frequency": "月度累计", "status": "official"}, {"id": "china_mfg_invest", "name": "制造业投资", "value": -1.2, "unit": "%", "period": "2026-01~06 同比", "previous": null, "direction": "—", "signal": "偏空", "impact": "制造业资本开支放缓，对工业金属需求偏弱。", "source": "国家统计局", "frequency": "月度累计", "status": "official"}, {"id": "dxy", "name": "美元指数 DXY", "value": null, "unit": "", "period": "待接入", "previous": null, "direction": "—", "signal": "中性", "impact": "美元走强通常压制美元计价金属；免费版默认可用Fed广义美元指数做代理。", "source": "ICE DXY（授权数据）/ FRED广义美元指数（免费代理）", "frequency": "日度", "status": "manual"}, {"id": "real_yield", "name": "美国10年期实际利率", "value": 2.4, "unit": "%", "period": "2026-08-04", "previous": 2.44, "direction": "↓", "signal": "偏多", "impact": "实际利率下降通常利好黄金，并改善风险资产估值。", "source": "FRED / Federal Reserve DFII10", "frequency": "日度", "status": "official"}, {"id": "central_bank_gold", "name": "央行购金", "value": 243.7, "unit": "吨", "period": "2026Q1", "previous": 237.0, "direction": "↑", "signal": "偏多", "impact": "央行持续净购金，为黄金提供结构性需求支撑。", "source": "World Gold Council", "frequency": "季度", "status": "official"}]};
+let DATA = FALLBACK_DATA;
+let deferredPrompt = null;
+
+function tone(s) {
+  if((s||"").includes("偏多")) return "good";
+  if((s||"").includes("偏空")) return "bad";
+  return "mid";
+}
+function fmt(v,u) { return (v===null||v===undefined) ? "待接入" : `${v}${u||""}`; }
+
+function renderMetalDetail(page, name, symbol) {
+  const m = DATA.metals[name] || {signal:"—",score:"—",note:"暂无"};
+  const relevant = DATA.metrics.filter(x => {
+    const n=x.name;
+    if(name==="黄金") return /实际利率|美元|央行购金|CPI|联邦基金/.test(n);
+    if(name==="铜") return /PMI|固定资产|房地产|基础设施|制造业投资|美元|GDP/.test(n);
+    return /PMI|固定资产|基础设施|制造业投资|美元|GDP/.test(n);
+  });
+  document.getElementById(page).innerHTML = `
+    <div class="hero">
+      <div class="eyebrow">${symbol} · ${name}景气评分</div>
+      <div class="signal ${tone(m.signal)}">${m.score}分 · ${m.signal}</div>
+      <div class="impact">${m.note}</div>
+    </div>
+    <div class="section"><h2>主要驱动</h2><div class="grid">
+      ${relevant.map(metricCard).join("")}
+    </div></div>
+    <div class="section"><div class="note">V2 当前的 ${name}页主要使用宏观驱动。V3 建议加入现货/期货价格、库存、供给增速、需求增速、成本曲线等商品专属变量。</div></div>`;
+}
+
+function metricCard(m) {
+  return `<article class="card">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:start">
+      <div class="metricName">${m.name}</div><span class="pill ${tone(m.signal)}">${m.signal}</span>
+    </div>
+    <div class="metricValue">${fmt(m.value,m.unit)} <span class="${m.direction==="↑"?"good":m.direction==="↓"?"bad":"mid"}">${m.direction||""}</span></div>
+    <div class="meta">${m.period} · ${m.frequency}</div>
+    <div class="impact">${m.impact}</div>
+    <div class="meta" style="margin-top:7px">来源：${m.source}</div>
+  </article>`;
+}
+
+function render() {
+  document.getElementById("overall").textContent = DATA.overall_signal || "—";
+  document.getElementById("overall").className = "signal " + tone(DATA.overall_signal);
+  document.getElementById("updated").textContent = "最近数据同步：" + (DATA.updated_at || "—");
+
+  document.getElementById("metalGrid").innerHTML =
+    [["铜","Cu"],["铝","Al"],["黄金","Au"]].map(([name,sym])=>{
+      const m=DATA.metals[name];
+      return `<button class="metal" data-jump="${name==="铜"?"copper":name==="铝"?"aluminum":"gold"}">
+        <div class="metalName">${sym} · ${name}</div>
+        <div class="metalScore">${m.score}分</div>
+        <div class="${tone(m.signal)}" style="font-size:12px">${m.signal}</div>
+      </button>`;
+    }).join("");
+
+  const importantIds=["china_pmi","china_fai","dxy","real_yield","central_bank_gold","us_gdp"];
+  document.getElementById("keyMetrics").innerHTML =
+    DATA.metrics.filter(m=>importantIds.includes(m.id)).map(metricCard).join("");
+
+  renderMacro();
+  renderMetalDetail("copper","铜","Cu");
+  renderMetalDetail("aluminum","铝","Al");
+  renderMetalDetail("gold","黄金","Au");
+
+  document.querySelectorAll("[data-jump]").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.jump)));
+}
+
+function renderMacro() {
+  const q=(document.getElementById("search")?.value||"").trim().toLowerCase();
+  const f=document.getElementById("filter")?.value||"all";
+  const arr=DATA.metrics.filter(m=>
+    (!q || `${m.name} ${m.source} ${m.impact}`.toLowerCase().includes(q)) &&
+    (f==="all" || (m.signal||"").includes(f))
+  );
+  document.getElementById("metrics").innerHTML = arr.length ? arr.map(metricCard).join("") : `<div class="empty">没有匹配指标</div>`;
+}
+
+function showPage(id) {
+  document.querySelectorAll(".detailPanel").forEach(x=>x.classList.toggle("active",x.id===id));
+  document.querySelectorAll(".navbtn").forEach(x=>x.classList.toggle("active",x.dataset.page===id));
+  history.replaceState(null,"","#"+id);
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+async function loadLatest() {
+  const badge=document.getElementById("networkBadge");
+  DATA=FALLBACK_DATA; render();
+  try {
+    const r=await fetch("data/latest.json?ts="+Date.now(),{cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const t=await r.text();
+    if(t.trim().startsWith("<")) throw new Error("服务器返回HTML/XML");
+    DATA=JSON.parse(t); render();
+    badge.textContent="已联网";
+    badge.className="pill good";
+  } catch(e) {
+    badge.textContent="离线数据";
+    badge.className="pill mid";
+  }
+}
+
+document.querySelectorAll(".navbtn").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.page)));
+document.getElementById("search").addEventListener("input",renderMacro);
+document.getElementById("filter").addEventListener("change",renderMacro);
+document.getElementById("refreshBtn").addEventListener("click",loadLatest);
+
+window.addEventListener("beforeinstallprompt", e => {
+  e.preventDefault(); deferredPrompt=e;
+  document.getElementById("installBtn").classList.add("show");
+});
+document.getElementById("installBtn").addEventListener("click", async()=>{
+  if(!deferredPrompt) return;
+  deferredPrompt.prompt();
+  await deferredPrompt.userChoice;
+  deferredPrompt=null;
+  document.getElementById("installBtn").classList.remove("show");
+});
+window.addEventListener("appinstalled",()=>document.getElementById("installBtn").classList.remove("show"));
+
+if("serviceWorker" in navigator) {
+  window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+}
+
+const initial=(location.hash||"#home").slice(1);
+loadLatest().then(()=>showPage(["home","macro","copper","aluminum","gold"].includes(initial)?initial:"home"));
+</script>
+</body>
+</html>
