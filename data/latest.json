@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17",
+  "updated": "2026-08-18",
   "is_demo": true,
   "mode": "hybrid",
   "items": {
@@ -76,9 +76,9 @@
       "provider": "demo"
     },
     "copper_price": {
-      "value": 13552.04090909091,
-      "change_pct": 0.3,
-      "updated": "2026-06-01",
+      "value": 13542.82086956522,
+      "change_pct": -0.07,
+      "updated": "2026-07-01",
       "unit": "USD/t",
       "is_demo": false,
       "source": "FRED / IMF Primary Commodity Prices",
@@ -247,9 +247,9 @@
       "provider": "demo"
     },
     "us_real_yield_10y": {
-      "value": 2.39,
-      "change_pct": -1.24,
-      "updated": "2026-08-13",
+      "value": 2.41,
+      "change_pct": 0.84,
+      "updated": "2026-08-14",
       "unit": "%",
       "is_demo": false,
       "source": "FRED / Federal Reserve Board H.15",
@@ -265,9 +265,9 @@
       "provider": "demo"
     },
     "zinc_price": {
-      "value": 3538.742727272727,
-      "change_pct": 1.76,
-      "updated": "2026-06-01",
+      "value": 3593.775,
+      "change_pct": 1.56,
+      "updated": "2026-07-01",
       "unit": "USD/t",
       "is_demo": false,
       "source": "FRED / IMF Primary Commodity Prices",
@@ -364,9 +364,9 @@
       "provider": "demo"
     },
     "aluminum_price": {
-      "value": 3438.847272727273,
-      "change_pct": -6.0,
-      "updated": "2026-06-01",
+      "value": 3158.265,
+      "change_pct": -8.16,
+      "updated": "2026-07-01",
       "unit": "USD/t",
       "is_demo": false,
       "source": "FRED / IMF Primary Commodity Prices",
@@ -499,9 +499,9 @@
       "provider": "demo"
     },
     "nickel_price": {
-      "value": 17588.28545454545,
-      "change_pct": -6.41,
-      "updated": "2026-06-01",
+      "value": 16632.36136363636,
+      "change_pct": -5.44,
+      "updated": "2026-07-01",
       "unit": "USD/t",
       "is_demo": false,
       "source": "FRED / IMF Primary Commodity Prices",
