@@ -1,328 +1,13 @@
 {
-  "updated": "2026-09-03",
+  "updated": "2026-09-04",
   "is_demo": true,
   "mode": "hybrid",
   "items": {
-    "new_investors": {
-      "value": 120.0,
-      "change_pct": 0.75,
-      "updated": "2026-08-11",
-      "unit": "万户",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "cxo_index": {
-      "value": 58.0,
-      "change_pct": 0.19,
-      "updated": "2026-08-11",
-      "unit": "score",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "market_turnover_rate": {
-      "value": 2.3,
-      "change_pct": -1.71,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "cloud_capex": {
-      "value": 105.0,
-      "change_pct": -0.77,
-      "updated": "2026-08-11",
-      "unit": "USD bn",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "csi1000": {
-      "value": 6900.0,
-      "change_pct": -0.38,
-      "updated": "2026-08-11",
-      "unit": "index",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "bank_nim": {
-      "value": 1.45,
-      "change_pct": -1.36,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "lpr_5y": {
-      "value": 3.5,
-      "change_pct": 0.0,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "bank_roe": {
-      "value": 9.8,
-      "change_pct": 0.82,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "copper_price": {
-      "value": 13542.82086956522,
-      "change_pct": -0.07,
-      "updated": "2026-07-01",
-      "unit": "USD/t",
-      "is_demo": false,
-      "source": "FRED / IMF Primary Commodity Prices",
-      "provider": "fred"
-    },
-    "margin_balance": {
-      "value": 19000.0,
-      "change_pct": 0.22,
-      "updated": "2026-08-11",
-      "unit": "亿元",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "fda_nme_count": {
-      "value": 52.0,
-      "change_pct": -0.48,
-      "updated": "2026-08-11",
-      "unit": "件",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "pmi_new_orders": {
-      "value": 50.8,
-      "change_pct": 0.59,
-      "updated": "2026-08-11",
-      "unit": "index",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "lme_aluminum_inventory": {
-      "value": 420000.0,
-      "change_pct": -0.32,
-      "updated": "2026-08-11",
-      "unit": "t",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "industrial_value_added_yoy": {
-      "value": 6.0,
-      "change_pct": 0.17,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "mfg_fai_yoy": {
-      "value": 8.5,
-      "change_pct": -1.39,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "global_pmi": {
-      "value": 50.0,
-      "change_pct": 0.4,
-      "updated": "2026-08-11",
-      "unit": "index",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "new_rmb_loans": {
-      "value": 18000.0,
-      "change_pct": -0.66,
-      "updated": "2026-08-11",
-      "unit": "亿元",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "copper_rc": {
-      "value": 1.5,
-      "change_pct": -0.66,
-      "updated": "2026-08-11",
-      "unit": "US¢/lb",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "medical_insurance_expense": {
-      "value": 2500.0,
-      "change_pct": -0.7,
-      "updated": "2026-08-11",
-      "unit": "亿元",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "fund_issuance": {
-      "value": 650.0,
-      "change_pct": -0.3,
-      "updated": "2026-08-11",
-      "unit": "亿元",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "m2_yoy": {
-      "value": 8.2,
-      "change_pct": -0.85,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "tsmc_revenue_yoy": {
-      "value": 25.0,
-      "change_pct": 0.2,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "provision_coverage": {
-      "value": 205.0,
-      "change_pct": -0.24,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
     "sox_index": {
       "value": 5800.0,
       "change_pct": -0.68,
       "updated": "2026-08-11",
       "unit": "index",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "china_nda_count": {
-      "value": 45.0,
-      "change_pct": -0.22,
-      "updated": "2026-08-11",
-      "unit": "件",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "a_share_turnover": {
-      "value": 12000.0,
-      "change_pct": -0.24,
-      "updated": "2026-08-11",
-      "unit": "亿元",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "pharma_profit_yoy": {
-      "value": 7.2,
-      "change_pct": -0.55,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "us_real_yield_10y": {
-      "value": 2.44,
-      "change_pct": 0.0,
-      "updated": "2026-09-01",
-      "unit": "%",
-      "is_demo": false,
-      "source": "FRED / Federal Reserve Board H.15",
-      "provider": "fred"
-    },
-    "broker_pb": {
-      "value": 1.6,
-      "change_pct": 0.63,
-      "updated": "2026-08-11",
-      "unit": "x",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "zinc_price": {
-      "value": 3593.775,
-      "change_pct": 1.56,
-      "updated": "2026-07-01",
-      "unit": "USD/t",
-      "is_demo": false,
-      "source": "FRED / IMF Primary Commodity Prices",
-      "provider": "fred"
-    },
-    "pmi_new_export_orders": {
-      "value": 49.4,
-      "change_pct": 0.39,
-      "updated": "2026-08-11",
-      "unit": "index",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "ai_server_index": {
-      "value": 78.0,
-      "change_pct": 0.71,
-      "updated": "2026-08-11",
-      "unit": "score",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "lme_copper_inventory": {
-      "value": 145000.0,
-      "change_pct": -1.16,
-      "updated": "2026-08-11",
-      "unit": "t",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "pharma_revenue_yoy": {
-      "value": 5.5,
-      "change_pct": 0.55,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "medical_insurance_income": {
-      "value": 2800.0,
-      "change_pct": 0.2,
-      "updated": "2026-08-11",
-      "unit": "亿元",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "bank_pb": {
-      "value": 0.65,
-      "change_pct": -1.52,
-      "updated": "2026-08-11",
-      "unit": "x",
       "is_demo": true,
       "source": "DEMO / 待接入真实数据源",
       "provider": "demo"
@@ -336,92 +21,20 @@
       "source": "DEMO / 待接入真实数据源",
       "provider": "demo"
     },
-    "silver_price": {
-      "value": 38.0,
-      "change_pct": -0.47,
-      "updated": "2026-08-11",
-      "unit": "USD/oz",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "china_software_revenue_yoy": {
-      "value": 11.5,
-      "change_pct": 0.88,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "copper_tc": {
-      "value": 15.0,
-      "change_pct": -0.86,
-      "updated": "2026-08-11",
-      "unit": "USD/dmt",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "aluminum_price": {
-      "value": 3158.265,
-      "change_pct": -8.16,
+    "zinc_price": {
+      "value": 3593.775,
+      "change_pct": 1.56,
       "updated": "2026-07-01",
       "unit": "USD/t",
       "is_demo": false,
       "source": "FRED / IMF Primary Commodity Prices",
       "provider": "fred"
     },
-    "dram_price_index": {
-      "value": 115.0,
-      "change_pct": -0.09,
-      "updated": "2026-08-11",
-      "unit": "index",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "ppi_yoy": {
-      "value": -0.6,
-      "change_pct": 4.76,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "nand_price_index": {
-      "value": 108.0,
-      "change_pct": -0.32,
-      "updated": "2026-08-11",
-      "unit": "index",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "risk_appetite": {
-      "value": 62.0,
-      "change_pct": -1.48,
-      "updated": "2026-08-11",
-      "unit": "score",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
     "industrial_profit_yoy": {
       "value": 4.2,
       "change_pct": -0.24,
       "updated": "2026-08-11",
       "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "shfe_copper_inventory": {
-      "value": 92000.0,
-      "change_pct": 1.13,
-      "updated": "2026-08-11",
-      "unit": "t",
       "is_demo": true,
       "source": "DEMO / 待接入真实数据源",
       "provider": "demo"
@@ -435,72 +48,27 @@
       "source": "DEMO / 待接入真实数据源",
       "provider": "demo"
     },
-    "china_ind_count": {
-      "value": 180.0,
-      "change_pct": 0.04,
-      "updated": "2026-08-11",
-      "unit": "件",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
+    "us_real_yield_10y": {
+      "value": 2.45,
+      "change_pct": 0.41,
+      "updated": "2026-09-02",
+      "unit": "%",
+      "is_demo": false,
+      "source": "FRED / Federal Reserve Board H.15",
+      "provider": "fred"
     },
-    "health_expenditure": {
-      "value": 24000.0,
-      "change_pct": -0.29,
-      "updated": "2026-08-11",
-      "unit": "亿元",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "capacity_utilization": {
-      "value": 75.2,
-      "change_pct": -1.43,
+    "smartphone_shipments_yoy": {
+      "value": 4.5,
+      "change_pct": 0.9,
       "updated": "2026-08-11",
       "unit": "%",
       "is_demo": true,
       "source": "DEMO / 待接入真实数据源",
       "provider": "demo"
     },
-    "gold_price": {
-      "value": 3300.0,
-      "change_pct": 1.12,
-      "updated": "2026-08-11",
-      "unit": "USD/oz",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "global_semiconductor_sales": {
-      "value": 58.0,
-      "change_pct": 0.26,
-      "updated": "2026-08-11",
-      "unit": "USD bn",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "semiconductor_sales_yoy": {
-      "value": 12.0,
-      "change_pct": 0.84,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "exports_yoy": {
-      "value": 6.5,
-      "change_pct": -1.22,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "nickel_price": {
-      "value": 16632.36136363636,
-      "change_pct": -5.44,
+    "aluminum_price": {
+      "value": 3158.265,
+      "change_pct": -8.16,
       "updated": "2026-07-01",
       "unit": "USD/t",
       "is_demo": false,
@@ -516,81 +84,54 @@
       "source": "DEMO / 待接入真实数据源",
       "provider": "demo"
     },
-    "mfg_pmi": {
-      "value": 50.2,
-      "change_pct": 0.48,
-      "updated": "2026-08-11",
-      "unit": "index",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "csi300": {
-      "value": 4300.0,
-      "change_pct": 0.91,
-      "updated": "2026-08-11",
-      "unit": "index",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "industrial_inventory_yoy": {
-      "value": 3.8,
-      "change_pct": -0.26,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "bank_npl": {
-      "value": 1.5,
-      "change_pct": -1.32,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "m1_yoy": {
-      "value": 4.0,
-      "change_pct": -0.25,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "robot_output_yoy": {
-      "value": 12.5,
-      "change_pct": 0.48,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "machine_tool_output_yoy": {
-      "value": 7.0,
-      "change_pct": -1.13,
-      "updated": "2026-08-11",
-      "unit": "%",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
-    "tech_pe": {
-      "value": 36.0,
-      "change_pct": -0.83,
-      "updated": "2026-08-11",
-      "unit": "x",
-      "is_demo": true,
-      "source": "DEMO / 待接入真实数据源",
-      "provider": "demo"
-    },
     "lpr_1y": {
       "value": 3.0,
       "change_pct": -0.33,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "global_pmi": {
+      "value": 50.0,
+      "change_pct": 0.4,
+      "updated": "2026-08-11",
+      "unit": "index",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "cxo_index": {
+      "value": 58.0,
+      "change_pct": 0.19,
+      "updated": "2026-08-11",
+      "unit": "score",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "china_nda_count": {
+      "value": 45.0,
+      "change_pct": -0.22,
+      "updated": "2026-08-11",
+      "unit": "件",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "nand_price_index": {
+      "value": 108.0,
+      "change_pct": -0.32,
+      "updated": "2026-08-11",
+      "unit": "index",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "china_10y_yield": {
+      "value": 1.85,
+      "change_pct": -0.54,
       "updated": "2026-08-11",
       "unit": "%",
       "is_demo": true,
@@ -606,20 +147,146 @@
       "source": "DEMO / 待接入真实数据源",
       "provider": "demo"
     },
-    "smartphone_shipments_yoy": {
-      "value": 4.5,
-      "change_pct": 0.9,
+    "china_software_revenue_yoy": {
+      "value": 11.5,
+      "change_pct": 0.88,
       "updated": "2026-08-11",
       "unit": "%",
       "is_demo": true,
       "source": "DEMO / 待接入真实数据源",
       "provider": "demo"
     },
-    "china_10y_yield": {
-      "value": 1.85,
-      "change_pct": -0.54,
+    "semiconductor_sales_yoy": {
+      "value": 12.0,
+      "change_pct": 0.84,
       "updated": "2026-08-11",
       "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "m2_yoy": {
+      "value": 8.2,
+      "change_pct": -0.85,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "pmi_new_orders": {
+      "value": 50.8,
+      "change_pct": 0.59,
+      "updated": "2026-08-11",
+      "unit": "index",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "china_ind_count": {
+      "value": 180.0,
+      "change_pct": 0.04,
+      "updated": "2026-08-11",
+      "unit": "件",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "new_rmb_loans": {
+      "value": 18000.0,
+      "change_pct": -0.66,
+      "updated": "2026-08-11",
+      "unit": "亿元",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "industrial_inventory_yoy": {
+      "value": 3.8,
+      "change_pct": -0.26,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "a_share_turnover": {
+      "value": 12000.0,
+      "change_pct": -0.24,
+      "updated": "2026-08-11",
+      "unit": "亿元",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "mfg_fai_yoy": {
+      "value": 8.5,
+      "change_pct": -1.39,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "gold_price": {
+      "value": 3300.0,
+      "change_pct": 1.12,
+      "updated": "2026-08-11",
+      "unit": "USD/oz",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "exports_yoy": {
+      "value": 6.5,
+      "change_pct": -1.22,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "broker_pb": {
+      "value": 1.6,
+      "change_pct": 0.63,
+      "updated": "2026-08-11",
+      "unit": "x",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "medical_insurance_expense": {
+      "value": 2500.0,
+      "change_pct": -0.7,
+      "updated": "2026-08-11",
+      "unit": "亿元",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "risk_appetite": {
+      "value": 62.0,
+      "change_pct": -1.48,
+      "updated": "2026-08-11",
+      "unit": "score",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "industrial_value_added_yoy": {
+      "value": 6.0,
+      "change_pct": 0.17,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "new_investors": {
+      "value": 120.0,
+      "change_pct": 0.75,
+      "updated": "2026-08-11",
+      "unit": "万户",
       "is_demo": true,
       "source": "DEMO / 待接入真实数据源",
       "provider": "demo"
@@ -629,6 +296,339 @@
       "change_pct": -1.43,
       "updated": "2026-08-11",
       "unit": "index",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "cloud_capex": {
+      "value": 105.0,
+      "change_pct": -0.77,
+      "updated": "2026-08-11",
+      "unit": "USD bn",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "lpr_5y": {
+      "value": 3.5,
+      "change_pct": 0.0,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "copper_price": {
+      "value": 13542.82086956522,
+      "change_pct": -0.07,
+      "updated": "2026-07-01",
+      "unit": "USD/t",
+      "is_demo": false,
+      "source": "FRED / IMF Primary Commodity Prices",
+      "provider": "fred"
+    },
+    "copper_rc": {
+      "value": 1.5,
+      "change_pct": -0.66,
+      "updated": "2026-08-11",
+      "unit": "US¢/lb",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "market_turnover_rate": {
+      "value": 2.3,
+      "change_pct": -1.71,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "bank_npl": {
+      "value": 1.5,
+      "change_pct": -1.32,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "medical_insurance_income": {
+      "value": 2800.0,
+      "change_pct": 0.2,
+      "updated": "2026-08-11",
+      "unit": "亿元",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "lme_aluminum_inventory": {
+      "value": 420000.0,
+      "change_pct": -0.32,
+      "updated": "2026-08-11",
+      "unit": "t",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "ai_server_index": {
+      "value": 78.0,
+      "change_pct": 0.71,
+      "updated": "2026-08-11",
+      "unit": "score",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "copper_tc": {
+      "value": 15.0,
+      "change_pct": -0.86,
+      "updated": "2026-08-11",
+      "unit": "USD/dmt",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "bank_nim": {
+      "value": 1.45,
+      "change_pct": -1.36,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "nickel_price": {
+      "value": 16632.36136363636,
+      "change_pct": -5.44,
+      "updated": "2026-07-01",
+      "unit": "USD/t",
+      "is_demo": false,
+      "source": "FRED / IMF Primary Commodity Prices",
+      "provider": "fred"
+    },
+    "machine_tool_output_yoy": {
+      "value": 7.0,
+      "change_pct": -1.13,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "bank_roe": {
+      "value": 9.8,
+      "change_pct": 0.82,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "robot_output_yoy": {
+      "value": 12.5,
+      "change_pct": 0.48,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "tsmc_revenue_yoy": {
+      "value": 25.0,
+      "change_pct": 0.2,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "global_semiconductor_sales": {
+      "value": 58.0,
+      "change_pct": 0.26,
+      "updated": "2026-08-11",
+      "unit": "USD bn",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "csi1000": {
+      "value": 6900.0,
+      "change_pct": -0.38,
+      "updated": "2026-08-11",
+      "unit": "index",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "dram_price_index": {
+      "value": 115.0,
+      "change_pct": -0.09,
+      "updated": "2026-08-11",
+      "unit": "index",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "capacity_utilization": {
+      "value": 75.2,
+      "change_pct": -1.43,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "ppi_yoy": {
+      "value": -0.6,
+      "change_pct": 4.76,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "shfe_copper_inventory": {
+      "value": 92000.0,
+      "change_pct": 1.13,
+      "updated": "2026-08-11",
+      "unit": "t",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "margin_balance": {
+      "value": 19000.0,
+      "change_pct": 0.22,
+      "updated": "2026-08-11",
+      "unit": "亿元",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "tech_pe": {
+      "value": 36.0,
+      "change_pct": -0.83,
+      "updated": "2026-08-11",
+      "unit": "x",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "provision_coverage": {
+      "value": 205.0,
+      "change_pct": -0.24,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "pharma_revenue_yoy": {
+      "value": 5.5,
+      "change_pct": 0.55,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "csi300": {
+      "value": 4300.0,
+      "change_pct": 0.91,
+      "updated": "2026-08-11",
+      "unit": "index",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "health_expenditure": {
+      "value": 24000.0,
+      "change_pct": -0.29,
+      "updated": "2026-08-11",
+      "unit": "亿元",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "pmi_new_export_orders": {
+      "value": 49.4,
+      "change_pct": 0.39,
+      "updated": "2026-08-11",
+      "unit": "index",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "bank_pb": {
+      "value": 0.65,
+      "change_pct": -1.52,
+      "updated": "2026-08-11",
+      "unit": "x",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "lme_copper_inventory": {
+      "value": 145000.0,
+      "change_pct": -1.16,
+      "updated": "2026-08-11",
+      "unit": "t",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "m1_yoy": {
+      "value": 4.0,
+      "change_pct": -0.25,
+      "updated": "2026-08-11",
+      "unit": "%",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "silver_price": {
+      "value": 38.0,
+      "change_pct": -0.47,
+      "updated": "2026-08-11",
+      "unit": "USD/oz",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "fund_issuance": {
+      "value": 650.0,
+      "change_pct": -0.3,
+      "updated": "2026-08-11",
+      "unit": "亿元",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "mfg_pmi": {
+      "value": 50.2,
+      "change_pct": 0.48,
+      "updated": "2026-08-11",
+      "unit": "index",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "fda_nme_count": {
+      "value": 52.0,
+      "change_pct": -0.48,
+      "updated": "2026-08-11",
+      "unit": "件",
+      "is_demo": true,
+      "source": "DEMO / 待接入真实数据源",
+      "provider": "demo"
+    },
+    "pharma_profit_yoy": {
+      "value": 7.2,
+      "change_pct": -0.55,
+      "updated": "2026-08-11",
+      "unit": "%",
       "is_demo": true,
       "source": "DEMO / 待接入真实数据源",
       "provider": "demo"
