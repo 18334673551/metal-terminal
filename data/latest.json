@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "is_demo": true,
   "mode": "hybrid",
   "items": {
@@ -409,9 +409,9 @@
       "provider": "demo"
     },
     "us_real_yield_10y": {
-      "value": 2.65,
-      "change_pct": 1.15,
-      "updated": "2026-11-03",
+      "value": 2.64,
+      "change_pct": -0.38,
+      "updated": "2026-11-04",
       "unit": "%",
       "is_demo": false,
       "source": "FRED / Federal Reserve Board H.15",
